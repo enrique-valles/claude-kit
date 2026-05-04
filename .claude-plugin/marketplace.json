@@ -29,6 +29,15 @@
       },
       "description": "AI design intelligence: 67 UI styles, 161 color palettes, 57 font pairings",
       "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    {
+      "name": "caveman",
+      "source": {
+        "source": "github",
+        "repo": "juliusbrussee/caveman"
+      },
+      "description": "Token-compression skill — cuts ~75% of output tokens using abbreviated caveman-style language",
+      "homepage": "https://github.com/juliusbrussee/caveman"
     }
   ]
 }

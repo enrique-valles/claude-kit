@@ -30,6 +30,7 @@ Tell the user to run in Claude Code:
 /plugin install superpowers@quique-claude-hub
 /plugin install frontend-design@quique-claude-hub
 /plugin install ui-ux-pro-max@quique-claude-hub
+/plugin install caveman@quique-claude-hub
 ```
 
 **Step 4 — Remind about the GitHub token**

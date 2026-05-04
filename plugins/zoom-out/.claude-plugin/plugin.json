@@ -1,0 +1,10 @@
+{
+  "name": "zoom-out",
+  "description": "Asks Claude to go up a layer of abstraction and map all relevant modules and callers for an unfamiliar area of code.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock"
+  },
+  "homepage": "https://github.com/mattpocock/skills/tree/main/skills/engineering/zoom-out",
+  "license": "MIT"
+}

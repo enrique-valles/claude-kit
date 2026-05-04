@@ -19,6 +19,9 @@ Run these steps in order. Ask before skipping any step.
 /plugin install frontend-design@quique-claude-hub
 /plugin install ui-ux-pro-max@quique-claude-hub
 /plugin install caveman@quique-claude-hub
+/plugin install diagnose@quique-claude-hub
+/plugin install grill-me@quique-claude-hub
+/plugin install zoom-out@quique-claude-hub
 ```
 
 **Step 3 — Add MCP servers**

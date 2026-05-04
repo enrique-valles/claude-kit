@@ -1,0 +1,10 @@
+{
+  "name": "grill-me",
+  "description": "Relentless interview skill — stress-tests a plan by walking every branch of the decision tree, one question at a time.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock"
+  },
+  "homepage": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me",
+  "license": "MIT"
+}

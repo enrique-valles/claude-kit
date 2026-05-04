@@ -16,6 +16,9 @@ Plugins bundle skills, agents, hooks, and MCP servers into installable units. Ea
 | `frontend-design` | Skill for distinctive, production-grade UI — avoids generic AI aesthetics | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/frontend-design) |
 | `ui-ux-pro-max` | AI design intelligence — 67 styles, 161 palettes, 57 font pairings | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | `caveman` | Token-compression skill — cuts ~75% of output tokens using abbreviated caveman-style language | [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman) |
+| `diagnose` | Disciplined 6-phase debugging methodology: feedback loop → reproduce → hypothesise → instrument → fix → post-mortem | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnose) |
+| `grill-me` | Relentless plan interview — walks every decision branch one question at a time | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me) |
+| `zoom-out` | Maps all relevant modules and callers for unfamiliar code, one abstraction level up | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/zoom-out) |
 
 ### Skills
 
@@ -27,6 +30,9 @@ Skills are model-invoked instructions inside a plugin. They activate automatical
 | `superpowers:*` | `superpowers` | Various — see [superpowers docs](https://github.com/obra/superpowers) |
 | `ui-ux-pro-max:*` | `ui-ux-pro-max` | Design system generation and UI work |
 | `caveman:*` | `caveman` | Token reduction — activate manually or ask Claude to use caveman mode |
+| `diagnose` | `diagnose` | Bug reports, "debug this", performance regressions |
+| `grill-me` | `grill-me` | "Grill me on this plan", stress-testing a design |
+| `zoom-out` | `zoom-out` | Unfamiliar code area, "how does this fit together" |
 
 To add a standalone skill (one not tied to an existing plugin), see [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -54,6 +60,9 @@ To add a standalone skill (one not tied to an existing plugin), see [CONTRIBUTIN
 /plugin install frontend-design@quique-claude-hub
 /plugin install ui-ux-pro-max@quique-claude-hub
 /plugin install caveman@quique-claude-hub
+/plugin install diagnose@quique-claude-hub
+/plugin install grill-me@quique-claude-hub
+/plugin install zoom-out@quique-claude-hub
 ```
 
 ### 3. Add MCP servers
@@ -84,6 +93,9 @@ Then in Claude Code:
 /plugin update frontend-design@quique-claude-hub
 /plugin update ui-ux-pro-max@quique-claude-hub
 /plugin update caveman@quique-claude-hub
+/plugin update diagnose@quique-claude-hub
+/plugin update grill-me@quique-claude-hub
+/plugin update zoom-out@quique-claude-hub
 ```
 
 ---

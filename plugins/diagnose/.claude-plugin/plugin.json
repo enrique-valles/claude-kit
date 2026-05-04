@@ -1,0 +1,10 @@
+{
+  "name": "diagnose",
+  "description": "Disciplined 6-phase debugging methodology: feedback loop → reproduce → hypothesise → instrument → fix → post-mortem.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock"
+  },
+  "homepage": "https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnose",
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "my-claude-hub",
+  "owner": { "name": "Your Name" },
+  "plugins": [
+    { "name": "superpowers", "source": "./plugins/superpowers" },
+    { "name": "frontend-design", "source": "./plugins/frontend-design" },
+    { "name": "ui-ux-pro-max", "source": "./plugins/ui-ux-pro-max" }
+  ]
+}

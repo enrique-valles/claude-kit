@@ -78,7 +78,7 @@ echo "     -- docker run -i --rm -e GITHUB_PERSONAL_ACCESS_TOKEN ghcr.io/github/
 echo ""
 
 read -r -p "   Run these claude mcp add commands now? [y/N] " reply || true
-if [[ "${reply,,}" == "y" ]]; then
+if [[ "$(echo "$reply" | tr '[:upper:]' '[:lower:]')" == "y" ]]; then
   echo ""
   echo "   Adding context7..."
   claude mcp add context7 -s user -- npx -y @upstash/context7-mcp

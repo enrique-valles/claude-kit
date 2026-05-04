@@ -1,4 +1,4 @@
-# claude-hub
+# claude-kit
 
 Personal plugin marketplace and MCP configuration hub for Claude Code CLI.
 
@@ -50,19 +50,19 @@ To add a standalone skill (one not tied to an existing plugin), see [CONTRIBUTIN
 ### 1. Add the marketplace
 
 ```
-/plugin marketplace add quiquevalles15/claude-hub
+/plugin marketplace add quiquevalles15/claude-kit
 ```
 
 ### 2. Install plugins
 
 ```
-/plugin install superpowers@quique-claude-hub
-/plugin install frontend-design@quique-claude-hub
-/plugin install ui-ux-pro-max@quique-claude-hub
-/plugin install caveman@quique-claude-hub
-/plugin install diagnose@quique-claude-hub
-/plugin install grill-me@quique-claude-hub
-/plugin install zoom-out@quique-claude-hub
+/plugin install superpowers@claude-kit
+/plugin install frontend-design@claude-kit
+/plugin install ui-ux-pro-max@claude-kit
+/plugin install caveman@claude-kit
+/plugin install diagnose@claude-kit
+/plugin install grill-me@claude-kit
+/plugin install zoom-out@claude-kit
 ```
 
 ### 3. Add MCP servers
@@ -88,14 +88,14 @@ git pull
 Then in Claude Code:
 
 ```
-/plugin marketplace update quique-claude-hub
-/plugin update superpowers@quique-claude-hub
-/plugin update frontend-design@quique-claude-hub
-/plugin update ui-ux-pro-max@quique-claude-hub
-/plugin update caveman@quique-claude-hub
-/plugin update diagnose@quique-claude-hub
-/plugin update grill-me@quique-claude-hub
-/plugin update zoom-out@quique-claude-hub
+/plugin marketplace update claude-kit
+/plugin update superpowers@claude-kit
+/plugin update frontend-design@claude-kit
+/plugin update ui-ux-pro-max@claude-kit
+/plugin update caveman@claude-kit
+/plugin update diagnose@claude-kit
+/plugin update grill-me@claude-kit
+/plugin update zoom-out@claude-kit
 ```
 
 ---

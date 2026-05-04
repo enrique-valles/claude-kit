@@ -7,7 +7,7 @@ How to add, update, and remove plugins, skills, and MCP servers in this hub.
 ## Repo structure at a glance
 
 ```
-claude-hub/
+claude-kit/
 ├── .claude-plugin/
 │   └── marketplace.json      ← plugin catalog (edit this to add/remove plugins)
 ├── plugins/
@@ -41,7 +41,7 @@ If the plugin has a `.claude-plugin/plugin.json` at its repo root, add a GitHub 
 Then install it in Claude Code:
 
 ```
-/plugin install my-plugin@quique-claude-hub
+/plugin install my-plugin@claude-kit
 ```
 
 ### As a local wrapper (when upstream has no plugin manifest)
@@ -119,7 +119,7 @@ The `frontend-design` SKILL.md is a manual copy from upstream (`anthropics/skill
 2. Copy the new content into `plugins/frontend-design/skills/frontend-design/SKILL.md`
 3. Bump `version` in `plugins/frontend-design/.claude-plugin/plugin.json`
 4. Commit and push
-5. Run `/plugin update frontend-design@quique-claude-hub` in Claude Code
+5. Run `/plugin update frontend-design@claude-kit` in Claude Code
 
 ---
 
@@ -156,7 +156,7 @@ claude mcp add my-server -s user -- npx -y my-mcp-package
 
 1. Remove the entry from `.claude-plugin/marketplace.json`
 2. If it has a local wrapper, delete the `plugins/<name>/` directory
-3. In Claude Code: `/plugin uninstall <name>@quique-claude-hub`
+3. In Claude Code: `/plugin uninstall <name>@claude-kit`
 
 ## Removing an MCP server
 

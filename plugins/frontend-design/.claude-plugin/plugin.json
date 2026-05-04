@@ -1,0 +1,10 @@
+{
+  "name": "frontend-design",
+  "description": "Frontend design skill for distinctive, production-grade UI. Avoids generic AI aesthetics.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Anthropic"
+  },
+  "homepage": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+  "license": "MIT"
+}

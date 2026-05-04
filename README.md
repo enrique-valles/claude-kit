@@ -1,12 +1,12 @@
 # claude-hub
 
-Personal plugin marketplace and MCP configuration hub for Claude Code and Claude Desktop.
+Personal plugin marketplace and MCP configuration hub for Claude Code CLI.
 
-Clone this repo on any machine, run one script, and get full plugin and MCP parity across all your Claude setups.
+Clone this repo on any machine and follow the setup steps to get full plugin and MCP parity across all your Claude Code setups.
 
 ## What's included
 
-### Plugins (Claude Code CLI)
+### Plugins
 
 Plugins bundle skills, agents, hooks, and MCP servers into installable units. Each plugin listed here is fetched from its upstream source when installed — nothing is copied into this repo except `frontend-design`, which needs a local wrapper because the upstream only ships a raw skill file.
 
@@ -30,41 +30,24 @@ Skills are model-invoked instructions inside a plugin. They activate automatical
 
 To add a standalone skill (one not tied to an existing plugin), see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-### MCP Servers (Claude Code CLI + Claude Desktop)
+### MCP Servers
 
 | Server | Description |
 |---|---|
 | `context7` | Up-to-date library docs in context |
 | `github` | GitHub API access (issues, PRs, repos) |
 
+---
+
 ## Setup on a new machine
 
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/quiquevalles15/claude-hub
-cd claude-hub
-```
-
-### 2. Run setup script
-
-```bash
-chmod +x setup-desktop.sh
-./setup-desktop.sh
-```
-
-This:
-- Merges MCP servers into Claude Desktop config (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS)
-- Prompts to add MCPs to Claude Code CLI via `claude mcp add`
-- Prints plugin install commands
-
-### 3. Add the marketplace in Claude Code
+### 1. Add the marketplace
 
 ```
 /plugin marketplace add quiquevalles15/claude-hub
 ```
 
-### 4. Install plugins
+### 2. Install plugins
 
 ```
 /plugin install superpowers@quique-claude-hub
@@ -73,21 +56,28 @@ This:
 /plugin install caveman@quique-claude-hub
 ```
 
-### 5. Set your GitHub token
+### 3. Add MCP servers
 
-Get a token at [github.com/settings/tokens](https://github.com/settings/tokens).
+```bash
+claude mcp add context7 -s user -- npx -y @upstash/context7-mcp
 
-- **Claude Desktop**: after running `setup-desktop.sh`, edit `~/Library/Application Support/Claude/claude_desktop_config.json` and replace `YOUR_GITHUB_TOKEN`
-- **Claude Code CLI**: the setup script prompts you to enter your token interactively when configuring the `github` MCP (leave blank to skip and add it later)
+claude mcp add github -s user \
+  -e GITHUB_PERSONAL_ACCESS_TOKEN=YOUR_GITHUB_TOKEN \
+  -- docker run -i --rm -e GITHUB_PERSONAL_ACCESS_TOKEN ghcr.io/github/github-mcp-server
+```
+
+Replace `YOUR_GITHUB_TOKEN` with a token from [github.com/settings/tokens](https://github.com/settings/tokens).
+
+---
 
 ## Updating
 
 ```bash
 git pull
-./setup-desktop.sh    # re-run if MCP configs changed
 ```
 
-For plugin updates in Claude Code:
+Then in Claude Code:
+
 ```
 /plugin marketplace update quique-claude-hub
 /plugin update superpowers@quique-claude-hub
@@ -96,13 +86,7 @@ For plugin updates in Claude Code:
 /plugin update caveman@quique-claude-hub
 ```
 
-## Compatibility
-
-| App | Plugins | MCPs |
-|---|---|---|
-| Claude Code CLI | ✅ via marketplace | ✅ via `claude mcp add` |
-| Claude Desktop | ❌ no plugin system | ✅ via `setup-desktop.sh` |
-| Claude Web | ❌ | ❌ |
+---
 
 ## Maintenance
 

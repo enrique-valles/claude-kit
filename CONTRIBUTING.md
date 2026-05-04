@@ -17,9 +17,8 @@ claude-hub/
 │       └── skills/
 │           └── frontend-design/
 │               └── SKILL.md  ← skill instructions (update from upstream manually)
-├── mcp/
-│   └── mcp.json              ← MCP server definitions (edit this to add/remove MCPs)
-└── setup-desktop.sh          ← reads mcp.json, wires Desktop + CLI
+└── mcp/
+    └── mcp.json              ← MCP server reference (apply via `claude mcp add`)
 ```
 
 ---
@@ -126,7 +125,7 @@ The `frontend-design` SKILL.md is a manual copy from upstream (`anthropics/skill
 
 ## Adding an MCP server
 
-1. **Add the server definition to `mcp/mcp.json`** under `mcpServers`:
+1. **Add the server definition to `mcp/mcp.json`** under `mcpServers` for reference:
 
 ```json
 "my-server": {
@@ -135,7 +134,7 @@ The `frontend-design` SKILL.md is a manual copy from upstream (`anthropics/skill
 }
 ```
 
-For servers requiring auth, use a placeholder token and document it:
+For servers requiring auth, use a placeholder and document it:
 
 ```json
 "my-server": {
@@ -145,9 +144,7 @@ For servers requiring auth, use a placeholder token and document it:
 }
 ```
 
-2. **Re-run `./setup-desktop.sh`** to merge the new server into Claude Desktop's config. Existing servers are preserved — the merge is additive.
-
-3. **For Claude Code CLI**, run:
+2. **Apply it via Claude Code CLI:**
 
 ```bash
 claude mcp add my-server -s user -- npx -y my-mcp-package
@@ -164,5 +161,4 @@ claude mcp add my-server -s user -- npx -y my-mcp-package
 ## Removing an MCP server
 
 1. Remove the entry from `mcp/mcp.json`
-2. Manually remove it from `~/Library/Application Support/Claude/claude_desktop_config.json` (Desktop)
-3. For Claude Code CLI: `claude mcp remove <name>`
+2. Run: `claude mcp remove <name>`

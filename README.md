@@ -58,7 +58,10 @@ This:
 
 ### 5. Set your GitHub token
 
-Edit `~/Library/Application Support/Claude/claude_desktop_config.json` and replace `YOUR_GITHUB_TOKEN` with a token from [github.com/settings/tokens](https://github.com/settings/tokens).
+Get a token at [github.com/settings/tokens](https://github.com/settings/tokens).
+
+- **Claude Desktop**: after running `setup-desktop.sh`, edit `~/Library/Application Support/Claude/claude_desktop_config.json` and replace `YOUR_GITHUB_TOKEN`
+- **Claude Code CLI**: the setup script prompts for your token interactively when you choose `y` to run `claude mcp add`
 
 ## Updating
 
@@ -71,6 +74,8 @@ For plugin updates in Claude Code:
 ```
 /plugin marketplace update quique-claude-hub
 /plugin update superpowers@quique-claude-hub
+/plugin update frontend-design@quique-claude-hub
+/plugin update ui-ux-pro-max@quique-claude-hub
 ```
 
 ## Compatibility
@@ -83,7 +88,10 @@ For plugin updates in Claude Code:
 
 ## Adding more plugins
 
-Edit `.claude-plugin/marketplace.json` and add an entry under `plugins`. Use `"source": { "source": "github", "repo": "owner/repo" }` for GitHub repos, or `"./plugins/my-plugin"` for local wrappers when the upstream repo lacks a plugin manifest.
+Edit `.claude-plugin/marketplace.json` and add an entry under `plugins`:
+
+- **Remote GitHub repo** (plugin has a proper `.claude-plugin/plugin.json`): `"source": { "source": "github", "repo": "owner/repo" }`
+- **Local wrapper** (upstream repo lacks a plugin manifest): create a `plugins/my-plugin/` directory following the structure in `plugins/frontend-design/`, then set `"source": "./plugins/my-plugin"`
 
 ## Adding more MCP servers
 

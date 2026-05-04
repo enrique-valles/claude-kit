@@ -1,9 +1,34 @@
 {
-  "name": "my-claude-hub",
-  "owner": { "name": "Your Name" },
+  "name": "quique-claude-hub",
+  "owner": {
+    "name": "Enrique",
+    "email": "quiquevalles15@gmail.com"
+  },
+  "description": "Personal plugin and MCP hub for Claude Code",
   "plugins": [
-    { "name": "superpowers", "source": "./plugins/superpowers" },
-    { "name": "frontend-design", "source": "./plugins/frontend-design" },
-    { "name": "ui-ux-pro-max", "source": "./plugins/ui-ux-pro-max" }
+    {
+      "name": "superpowers",
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers"
+      },
+      "description": "Composable skills and instructions for AI coding agents",
+      "homepage": "https://github.com/obra/superpowers"
+    },
+    {
+      "name": "frontend-design",
+      "source": "./plugins/frontend-design",
+      "description": "Frontend design skill for distinctive, production-grade UI",
+      "homepage": "https://github.com/anthropics/skills/tree/main/skills/frontend-design"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      },
+      "description": "AI design intelligence: 67 UI styles, 161 color palettes, 57 font pairings",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+    }
   ]
 }

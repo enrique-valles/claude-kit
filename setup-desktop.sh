@@ -77,14 +77,14 @@ echo "     -e GITHUB_PERSONAL_ACCESS_TOKEN=YOUR_GITHUB_TOKEN \\"
 echo "     -- docker run -i --rm -e GITHUB_PERSONAL_ACCESS_TOKEN ghcr.io/github/github-mcp-server"
 echo ""
 
-read -r -p "   Run these claude mcp add commands now? [y/N] " reply
+read -r -p "   Run these claude mcp add commands now? [y/N] " reply || true
 if [[ "${reply,,}" == "y" ]]; then
   echo ""
   echo "   Adding context7..."
   claude mcp add context7 -s user -- npx -y @upstash/context7-mcp
   echo "   context7 added."
   echo ""
-  read -r -p "   Enter your GitHub token for the github MCP (leave blank to skip): " gh_token
+  read -r -p "   Enter your GitHub token for the github MCP (leave blank to skip): " gh_token || true
   if [ -n "$gh_token" ]; then
     claude mcp add github -s user \
       -e "GITHUB_PERSONAL_ACCESS_TOKEN=$gh_token" \

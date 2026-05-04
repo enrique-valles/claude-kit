@@ -8,11 +8,25 @@ Clone this repo on any machine, run one script, and get full plugin and MCP pari
 
 ### Plugins (Claude Code CLI)
 
-| Plugin | Description | Source |
+Plugins bundle skills, agents, hooks, and MCP servers into installable units. Each plugin listed here is fetched from its upstream source when installed — nothing is copied into this repo except `frontend-design`, which needs a local wrapper because the upstream only ships a raw skill file.
+
+| Plugin | What it provides | Source |
 |---|---|---|
-| `superpowers` | Composable skills for AI coding agents | [obra/superpowers](https://github.com/obra/superpowers) |
-| `frontend-design` | Distinctive, production-grade UI skill | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/frontend-design) |
-| `ui-ux-pro-max` | AI design intelligence — 67 styles, 161 palettes | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
+| `superpowers` | Skills for AI coding workflows (TDD, debugging, planning, code review…) | [obra/superpowers](https://github.com/obra/superpowers) |
+| `frontend-design` | Skill for distinctive, production-grade UI — avoids generic AI aesthetics | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/frontend-design) |
+| `ui-ux-pro-max` | AI design intelligence — 67 styles, 161 palettes, 57 font pairings | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
+
+### Skills
+
+Skills are model-invoked instructions inside a plugin. They activate automatically based on context — no slash command needed. The plugins above bundle the following skills:
+
+| Skill | Plugin | When it activates |
+|---|---|---|
+| `frontend-design` | `frontend-design` | Building web components, pages, or any UI |
+| `superpowers:*` | `superpowers` | Various — see [superpowers docs](https://github.com/obra/superpowers) |
+| `ui-ux-pro-max:*` | `ui-ux-pro-max` | Design system generation and UI work |
+
+To add a standalone skill (one not tied to an existing plugin), see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### MCP Servers (Claude Code CLI + Claude Desktop)
 
@@ -86,13 +100,6 @@ For plugin updates in Claude Code:
 | Claude Desktop | ❌ no plugin system | ✅ via `setup-desktop.sh` |
 | Claude Web | ❌ | ❌ |
 
-## Adding more plugins
+## Maintenance
 
-Edit `.claude-plugin/marketplace.json` and add an entry under `plugins`:
-
-- **Remote GitHub repo** (plugin has a proper `.claude-plugin/plugin.json`): `"source": { "source": "github", "repo": "owner/repo" }`
-- **Local wrapper** (upstream repo lacks a plugin manifest): create a `plugins/my-plugin/` directory following the structure in `plugins/frontend-design/`, then set `"source": "./plugins/my-plugin"`
-
-## Adding more MCP servers
-
-Add entries to `mcp/mcp.json` under `mcpServers`, then re-run `./setup-desktop.sh`.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add plugins, skills, and MCP servers.

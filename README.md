@@ -61,7 +61,7 @@ This:
 Get a token at [github.com/settings/tokens](https://github.com/settings/tokens).
 
 - **Claude Desktop**: after running `setup-desktop.sh`, edit `~/Library/Application Support/Claude/claude_desktop_config.json` and replace `YOUR_GITHUB_TOKEN`
-- **Claude Code CLI**: the setup script prompts for your token interactively when you choose `y` to run `claude mcp add`
+- **Claude Code CLI**: the setup script prompts you to enter your token interactively when configuring the `github` MCP (leave blank to skip and add it later)
 
 ## Updating
 

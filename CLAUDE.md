@@ -9,7 +9,7 @@ Run these steps in order. Ask before skipping any step.
 **Step 1 — Add this repo as a Claude Code marketplace**
 
 ```
-/plugin marketplace add quiquevalles15/claude-kit
+/plugin marketplace add enrique-valles/claude-kit
 ```
 
 **Step 2 — Install all plugins**

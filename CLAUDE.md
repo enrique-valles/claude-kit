@@ -27,6 +27,8 @@ Run these steps in order. Ask before skipping any step.
 **Step 3 — Add MCP servers**
 
 ```bash
+claude mcp add --transport http figma https://mcp.figma.com/mcp
+
 claude mcp add context7 -s user -- npx -y @upstash/context7-mcp
 
 claude mcp add github -s user \
@@ -35,6 +37,8 @@ claude mcp add github -s user \
 ```
 
 Remind the user to replace `YOUR_GITHUB_TOKEN` with a real token from [github.com/settings/tokens](https://github.com/settings/tokens).
+
+To authenticate Figma MCP, run `claude mcp add --transport http figma https://mcp.figma.com/mcp` then open Claude and authorize via the OAuth prompt.
 
 ---
 

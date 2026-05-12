@@ -22,6 +22,7 @@ Run these steps in order. Ask before skipping any step.
 /plugin install diagnose@claude-kit
 /plugin install grill-me@claude-kit
 /plugin install zoom-out@claude-kit
+/plugin install vercel-react-best-practices@claude-kit
 
 # claude-mem: only marketplace add works (no plugin install step)
 /plugin marketplace add thedotmack/claude-mem

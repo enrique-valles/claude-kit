@@ -1,0 +1,10 @@
+{
+  "name": "vercel-react-best-practices",
+  "description": "70-rule React and Next.js performance optimization guide from Vercel Engineering. Covers waterfalls, bundle size, server-side perf, rendering, re-renders, and more.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Vercel Engineering"
+  },
+  "homepage": "https://vercel.com",
+  "license": "MIT"
+}

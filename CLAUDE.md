@@ -22,12 +22,18 @@ Run these steps in order. Ask before skipping any step.
 /plugin install diagnose@claude-kit
 /plugin install grill-me@claude-kit
 /plugin install zoom-out@claude-kit
+
+# claude-mem bundles its own MCP worker — install as plugin, not via mcp add
+/plugin marketplace add thedotmack/claude-mem
+/plugin install claude-mem
 ```
 
 **Step 3 — Add MCP servers**
 
 ```bash
 claude mcp add --transport http figma https://mcp.figma.com/mcp
+
+claude mcp add context-mode -- npx -y context-mode
 
 claude mcp add context7 -s user -- npx -y @upstash/context7-mcp
 

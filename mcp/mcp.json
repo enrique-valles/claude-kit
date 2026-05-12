@@ -4,6 +4,10 @@
       "type": "http",
       "url": "https://mcp.figma.com/mcp"
     },
+    "context-mode": {
+      "command": "npx",
+      "args": ["-y", "context-mode"]
+    },
     "context7": {
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp"]

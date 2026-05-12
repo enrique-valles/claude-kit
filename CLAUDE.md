@@ -23,9 +23,12 @@ Run these steps in order. Ask before skipping any step.
 /plugin install grill-me@claude-kit
 /plugin install zoom-out@claude-kit
 
-# claude-mem bundles its own MCP worker — install as plugin, not via mcp add
+# claude-mem: only marketplace add works (no plugin install step)
 /plugin marketplace add thedotmack/claude-mem
-/plugin install claude-mem
+
+# pr-review-toolkit: 6 specialized PR review agents from Anthropic
+/plugin marketplace add anthropics/claude-code
+/plugin install pr-review-toolkit@claude-code
 ```
 
 **Step 3 — Add MCP servers**

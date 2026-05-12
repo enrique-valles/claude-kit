@@ -6,7 +6,8 @@
     },
     "context-mode": {
       "command": "npx",
-      "args": ["-y", "context-mode"]
+      "args": ["-y", "context-mode"],
+      "scope": "user"
     },
     "context7": {
       "command": "npx",

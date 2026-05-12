@@ -36,7 +36,7 @@ Run these steps in order. Ask before skipping any step.
 ```bash
 claude mcp add --transport http figma https://mcp.figma.com/mcp
 
-claude mcp add context-mode -- npx -y context-mode
+claude mcp add -s user context-mode -- npx -y context-mode
 
 claude mcp add context7 -s user -- npx -y @upstash/context7-mcp
 

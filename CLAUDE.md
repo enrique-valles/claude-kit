@@ -22,7 +22,6 @@ Run these steps in order. Ask before skipping any step.
 /plugin install diagnose@claude-kit
 /plugin install grill-me@claude-kit
 /plugin install zoom-out@claude-kit
-/plugin install vercel-react-best-practices@claude-kit
 
 # claude-mem: only marketplace add works (no plugin install step)
 /plugin marketplace add thedotmack/claude-mem
@@ -30,6 +29,12 @@ Run these steps in order. Ask before skipping any step.
 # pr-review-toolkit: 6 specialized PR review agents from Anthropic
 /plugin marketplace add anthropics/claude-code
 /plugin install pr-review-toolkit@claude-code
+```
+
+**Step 2b — Install skills via skills CLI**
+
+```bash
+npx skills add vercel-labs/agent-skills@vercel-react-best-practices -g -y
 ```
 
 **Step 3 — Add MCP servers**

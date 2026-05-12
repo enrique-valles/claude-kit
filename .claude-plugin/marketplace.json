@@ -56,12 +56,6 @@
       "source": "./plugins/zoom-out",
       "description": "Maps all relevant modules and callers for an unfamiliar area of code, one layer of abstraction up",
       "homepage": "https://github.com/mattpocock/skills/tree/main/skills/engineering/zoom-out"
-    },
-    {
-      "name": "vercel-react-best-practices",
-      "source": "./plugins/vercel-react-best-practices",
-      "description": "70-rule React and Next.js performance optimization guide from Vercel Engineering",
-      "homepage": "https://vercel.com"
     }
   ]
 }

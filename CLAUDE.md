@@ -49,9 +49,15 @@ claude mcp add context7 -s user -- npx -y @upstash/context7-mcp
 claude mcp add github -s user \
   -e GITHUB_PERSONAL_ACCESS_TOKEN=YOUR_GITHUB_TOKEN \
   -- docker run -i --rm -e GITHUB_PERSONAL_ACCESS_TOKEN ghcr.io/github/github-mcp-server
+
+claude mcp add magic -s user \
+  -e API_KEY=YOUR_21ST_DEV_API_KEY \
+  -- npx -y @21st-dev/magic@latest
 ```
 
 Remind the user to replace `YOUR_GITHUB_TOKEN` with a real token from [github.com/settings/tokens](https://github.com/settings/tokens).
+
+Get a 21st.dev API key at [21st.dev/magic/console](https://21st.dev/magic/console). Use `/ui <description>` in chat to generate UI components.
 
 To authenticate Figma MCP, run `claude mcp add --transport http figma https://mcp.figma.com/mcp` then open Claude and authorize via the OAuth prompt.
 

@@ -19,6 +19,7 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 | `zoom-out` | Maps all relevant modules and callers for unfamiliar code, one abstraction level up | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/zoom-out) |
 | `claude-mem` | Persistent memory across Claude sessions (bundles its own MCP worker) | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) |
 | `pr-review-toolkit` | 6 specialized PR review agents (comment accuracy, test coverage, error handling, type design, code quality, simplification) | [anthropics/claude-code](https://github.com/anthropics/claude-code/tree/main/plugins/pr-review-toolkit) |
+| `gsap-skills` | Official GSAP animations, timelines, ScrollTrigger, plugins, React hooks, and performance best practices | [greensock/gsap-skills](https://github.com/greensock/gsap-skills) |
 
 ### Skills (via skills CLI)
 
@@ -34,6 +35,7 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 | `context-mode` | stdio | Reduces context window usage by ~98% via sandboxed execution |
 | `context7` | stdio | Up-to-date library docs in context |
 | `github` | stdio | GitHub API access — issues, PRs, repos, code search (requires Docker + token) |
+| `magic` | stdio | 21st.dev UI component generator — use `/ui <description>` (requires API key) |
 
 ---
 
@@ -62,6 +64,10 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 # pr-review-toolkit: 6 specialized PR review agents from Anthropic
 /plugin marketplace add anthropics/claude-code
 /plugin install pr-review-toolkit@claude-code
+
+# gsap-skills: official GSAP animations, timelines, ScrollTrigger, React hooks
+/plugin marketplace add greensock/gsap-skills
+/plugin install gsap-skills@gsap-skills
 ```
 
 ### 2b. Install skills via skills CLI
@@ -82,9 +88,15 @@ claude mcp add context7 -s user -- npx -y @upstash/context7-mcp
 claude mcp add github -s user \
   -e GITHUB_PERSONAL_ACCESS_TOKEN=YOUR_GITHUB_TOKEN \
   -- docker run -i --rm -e GITHUB_PERSONAL_ACCESS_TOKEN ghcr.io/github/github-mcp-server
+
+claude mcp add magic -s user \
+  -e API_KEY=YOUR_21ST_DEV_API_KEY \
+  -- npx -y @21st-dev/magic@latest
 ```
 
 Replace `YOUR_GITHUB_TOKEN` with a token from [github.com/settings/tokens](https://github.com/settings/tokens).
+
+Get a 21st.dev API key at [21st.dev/magic/console](https://21st.dev/magic/console). Use `/ui <description>` in chat to generate UI components.
 
 To authenticate Figma MCP, open Claude after running the `mcp add` command and authorize via the OAuth prompt.
 
@@ -108,6 +120,7 @@ Then in Claude Code:
 /plugin update grill-me@claude-kit
 /plugin update zoom-out@claude-kit
 /plugin update pr-review-toolkit@claude-code
+/plugin update gsap-skills@gsap-skills
 ```
 
 ---

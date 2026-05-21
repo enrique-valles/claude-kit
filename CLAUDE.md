@@ -29,6 +29,10 @@ Run these steps in order. Ask before skipping any step.
 # pr-review-toolkit: 6 specialized PR review agents from Anthropic
 /plugin marketplace add anthropics/claude-code
 /plugin install pr-review-toolkit@claude-code
+
+# gsap-skills: official GSAP animations, timelines, ScrollTrigger, React hooks
+/plugin marketplace add greensock/gsap-skills
+/plugin install gsap-skills@gsap-skills
 ```
 
 **Step 2b — Install skills via skills CLI**

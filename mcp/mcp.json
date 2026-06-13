@@ -1,5 +1,10 @@
 {
   "mcpServers": {
+    "vercel": {
+      "type": "http",
+      "url": "https://mcp.vercel.com",
+      "note": "Bundled with the vercel plugin (/plugin install vercel@claude-plugins-official). Uses OAuth — authorize on first connection."
+    },
     "figma": {
       "type": "http",
       "url": "https://mcp.figma.com/mcp"

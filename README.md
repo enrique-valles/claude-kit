@@ -20,6 +20,7 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 | `claude-mem` | Persistent memory across Claude sessions (bundles its own MCP worker) | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) |
 | `pr-review-toolkit` | 6 specialized PR review agents (comment accuracy, test coverage, error handling, type design, code quality, simplification) | [anthropics/claude-code](https://github.com/anthropics/claude-code/tree/main/plugins/pr-review-toolkit) |
 | `gsap-skills` | Official GSAP animations, timelines, ScrollTrigger, plugins, React hooks, and performance best practices | [greensock/gsap-skills](https://github.com/greensock/gsap-skills) |
+| `vercel` | Vercel deployments, logs, project context, and AI agents for architecture/performance/deploys (bundles MCP) | [claude-plugins-official](https://github.com/anthropics/claude-code-plugins) |
 
 ### Skills (via skills CLI)
 
@@ -36,6 +37,7 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 | `context7` | stdio | Up-to-date library docs in context |
 | `github` | stdio | GitHub API access — issues, PRs, repos, code search (requires Docker + token) |
 | `magic` | stdio | 21st.dev UI component generator — use `/ui <description>` (requires API key) |
+| `vercel` | HTTP | Vercel project/deployment context — bundled with the `vercel` plugin (requires OAuth) |
 
 ---
 
@@ -68,6 +70,9 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 # gsap-skills: official GSAP animations, timelines, ScrollTrigger, React hooks
 /plugin marketplace add greensock/gsap-skills
 /plugin install gsap-skills@gsap-skills
+
+# vercel: official Vercel plugin (claude-plugins-official is pre-registered, no marketplace add needed)
+/plugin install vercel@claude-plugins-official
 ```
 
 ### 2b. Install skills via skills CLI
@@ -121,6 +126,7 @@ Then in Claude Code:
 /plugin update zoom-out@claude-kit
 /plugin update pr-review-toolkit@claude-code
 /plugin update gsap-skills@gsap-skills
+/plugin update vercel@claude-plugins-official
 ```
 
 ---

@@ -33,6 +33,10 @@ Run these steps in order. Ask before skipping any step.
 # gsap-skills: official GSAP animations, timelines, ScrollTrigger, React hooks
 /plugin marketplace add greensock/gsap-skills
 /plugin install gsap-skills@gsap-skills
+
+# vercel: official Vercel plugin — deployments, logs, project context (bundles MCP at https://mcp.vercel.com)
+# claude-plugins-official is pre-registered in Claude Code, no marketplace add needed
+/plugin install vercel@claude-plugins-official
 ```
 
 **Step 2b — Install skills via skills CLI**

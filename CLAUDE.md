@@ -6,6 +6,14 @@ This repo is a personal plugin marketplace and MCP configuration hub for Claude 
 
 Run these steps in order. Ask before skipping any step.
 
+**Step 0 — Install RTK** (60-90% token savings on all CLI output)
+
+```bash
+curl -fsSL https://rtk.sh/install.sh | bash
+rtk --version  # should show: rtk X.Y.Z
+rtk init --global  # adds RTK instructions to ~/.claude/CLAUDE.md
+```
+
 **Step 1 — Add this repo as a Claude Code marketplace**
 
 ```
@@ -37,6 +45,10 @@ Run these steps in order. Ask before skipping any step.
 # vercel: official Vercel plugin — deployments, logs, project context (bundles MCP at https://mcp.vercel.com)
 # claude-plugins-official is pre-registered in Claude Code, no marketplace add needed
 /plugin install vercel@claude-plugins-official
+
+# cc-rtk: RTK token optimization plugin (auto-installs hook, no settings.json needed)
+/plugin marketplace add kira4094/cc-rtk
+/plugin install cc-rtk@cc-rtk
 ```
 
 **Step 2b — Install skills via skills CLI**

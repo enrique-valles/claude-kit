@@ -21,6 +21,7 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 | `pr-review-toolkit` | 6 specialized PR review agents (comment accuracy, test coverage, error handling, type design, code quality, simplification) | [anthropics/claude-code](https://github.com/anthropics/claude-code/tree/main/plugins/pr-review-toolkit) |
 | `gsap-skills` | Official GSAP animations, timelines, ScrollTrigger, plugins, React hooks, and performance best practices | [greensock/gsap-skills](https://github.com/greensock/gsap-skills) |
 | `vercel` | Vercel deployments, logs, project context, and AI agents for architecture/performance/deploys (bundles MCP) | [claude-plugins-official](https://github.com/anthropics/claude-code-plugins) |
+| `cc-rtk` | RTK token optimization — intercepts all Bash output, saves 60-90% tokens (auto-installs hook) | [kira4094/cc-rtk](https://github.com/kira4094/cc-rtk) |
 
 ### Skills (via skills CLI)
 
@@ -42,6 +43,16 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 ---
 
 ## Setup on a new machine
+
+### 0. Install RTK
+
+RTK (Rust Token Killer) saves 60-90% of tokens on CLI output by intercepting and compressing Bash commands.
+
+```bash
+curl -fsSL https://rtk.sh/install.sh | bash
+rtk --version  # should show: rtk X.Y.Z
+rtk init --global  # adds RTK instructions to ~/.claude/CLAUDE.md
+```
 
 ### 1. Add the marketplace
 
@@ -73,6 +84,10 @@ Clone this repo on any machine and follow the setup steps to get full plugin and
 
 # vercel: official Vercel plugin (claude-plugins-official is pre-registered, no marketplace add needed)
 /plugin install vercel@claude-plugins-official
+
+# cc-rtk: RTK token optimization (auto-installs hook, no settings.json needed)
+/plugin marketplace add kira4094/cc-rtk
+/plugin install cc-rtk@cc-rtk
 ```
 
 ### 2b. Install skills via skills CLI
@@ -127,6 +142,7 @@ Then in Claude Code:
 /plugin update pr-review-toolkit@claude-code
 /plugin update gsap-skills@gsap-skills
 /plugin update vercel@claude-plugins-official
+/plugin update cc-rtk@cc-rtk
 ```
 
 ---
